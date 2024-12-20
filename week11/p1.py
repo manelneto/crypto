@@ -32,17 +32,18 @@ def recover_secret_with_lagrange(shares):
     polynomial = lagrange(x_coords, y_coords)
     return round(polynomial(0)) 
 
-# Inputs
-secret = 12345
-num_shares = 4
-threshold = 3
+if __name__ == "__main__":
+    # Inputs
+    secret = 12345
+    num_shares = 4
+    threshold = 3
 
-shares = secret_sharing(secret, num_shares, threshold)
-print("Partes:", shares)
+    shares = secret_sharing(secret, num_shares, threshold)
+    print("Partes:", shares)
 
-# Seleciona 3 partes
-selected_shares = shares[:3]
+    # Seleciona 3 partes
+    selected_shares = shares[:3]
 
-# Reconstrói o segredo
-reconstructed_secret = recover_secret_with_lagrange(selected_shares)
-print("Segredo reconstruído:", reconstructed_secret)
+    # Reconstrói o segredo
+    reconstructed_secret = recover_secret_with_lagrange(selected_shares)
+    print("Segredo reconstruído:", reconstructed_secret)

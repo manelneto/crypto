@@ -43,7 +43,7 @@ Não, não é seguro gerar apenas uma nova chave pública $e$ e uma nova chave p
 Se a chave privada original $d$ for comprometida, então o atacante, que conhece os valores antigos $e$ e $d$, pode calcular $\phi(n)$, pois $e \times d \equiv 1 \pmod{\phi(n)}$.
 Tendo $\phi(n)$ e $n$, é mais provável que o atacante consiga fatorizar $n$ para encontrar os primos $p$ e $q$.
 
-Uma vez que o atacante tem $p$ e $q$, pode calcular $\phi(n)$ novamente e derivar qualquer novo par de chaves $e'$ e $d'$.
+Assim, o atacante pode derivar qualquer novo par de chaves $e'$ e $d'$.
 Portanto, para restabelecer a segurança, o Bob deve gerar um novo módulo $n$ com novos primos $p$ e $q$ e novas chaves $e$ e $d$.
 
 ## 4
